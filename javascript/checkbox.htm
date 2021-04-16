@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>checkbox操作</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="jquery-3.6.0.min.js"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+  <!--jquery必须是1.9.0版本以上的-->
+  <script>
+    function check() {
+      var checkList = []
+      $("input:checkbox[value='5']").attr('checked','true');
+
+
+      
+        // 通过name值
+        // $("input[name='Exportitem[goodstype]']").each(function () {
+        //   // 通过type获取
+        //   // $("input[type='checkbox']").each(function() {
+        //   if ($(this).is(":checked")) {
+        //     //获取title属性值
+        //     // checkList.push($(this).attr("title"))
+        //     // 获取value的值
+        //     alert('checked');
+        //     checkList.push($(this).val())
+        //   }
+        // });
+        // console.log(checkList)      
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <form class="layui-form" action="">
+    <div class="layui-form-item">
+      <label class="layui-form-label">复选框</label>
+      <div class="layui-input-block">
+        <input type="checkbox" name="like" title="写作" value="0">
+        <input type="checkbox" name="like" title="阅读" value="1">
+        <input type="checkbox" name="like" title="游戏" value="2">
+        <input type="checkbox" name="like" title="旅游" value="3">
+        <input type="checkbox" name="like" title="游泳" value="4">
+      </div>
+    </div>
+  </form>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="form-group field-exportitem-goodstype required">
+<label class="control-label">货物类型</label>
+<input type="hidden" name="Exportitem[goodstype]" value=""><div id="exportitem-goodstype" aria-required="true"><label><input type="checkbox" name="Exportitem[goodstype][]" value="4"> 普货</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="5"> 带电</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="6"> 带粉末</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="7"> 带液体</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="8"> 带膏体</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="9"> 带名牌</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="10"> 带胶体</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="11"> 药品</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="12"> 带磁</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="13"> 保健品</label>
+<label><input type="checkbox" name="Exportitem[goodstype][]" value="14"> 敏感货物</label></div>
+
+<div class="help-block"></div>
+</div>                        </div>
+
+  <div class="layui-input-block">
+    <button class="layui-btn" id="getCheckBoxTitle" onclick="check()">获取选中值</button>
+  </div>
+
+
+</body>
+
+</html>
