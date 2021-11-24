@@ -1,2 +1,2 @@
 # websnippet
-# web codes
+# 存放代码片段
