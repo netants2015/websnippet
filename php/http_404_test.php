@@ -1,5 +1,6 @@
 <?php
 //描一个CSV文件中的URL，找出死链
+//运行方式：php http_404_test.php urls.csv
 
 //使用composer自动加载器
 require 'vendor/autoload.php';
